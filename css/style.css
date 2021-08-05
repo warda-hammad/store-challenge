@@ -1,0 +1,398 @@
+:root {
+    --main-color: #6c64ff;
+    --second-color:#2f2e41;
+    --hover-color:#a166f4;
+    --text-color:#202020;
+}
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+    width: 730px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* start header  */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+header .image {
+    width: 80px;
+}
+header .image img {
+    max-width: 100%;
+}
+header .search {
+    width: 250px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    z-index: 3;
+    
+}
+header .search input {
+    max-width: calc(100% - 30px);
+    max-height: 100%;
+    border: none;
+    outline: none;
+    padding: 20px ;
+    position: absolute;
+    top: 3px;
+    left: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 18px 3px silver;
+}
+header .search i {
+    width: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+    color: var(--text-color);
+}
+@media (max-width: 767px) {
+    header .search {
+        width: 200px;
+    }
+    header .search input {
+        max-width: calc(100% - 60px);
+    }
+    header .image {
+        width: 50px;
+        margin-left: 30px;
+    }
+}
+/* end header  */
+/* start  Main section  */
+.main {
+    min-height: 100vh; 
+    background-color: var(--main-color);
+    background-image: url(../images/background.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.main .container .social {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 300px;
+    margin: 0 20px;
+    box-shadow: 0px 0px 18px 5px silver;
+    position: fixed;
+    top: 40%;
+    transform: translate(-50%);
+    border-radius: 30px;
+}
+.main .container .social i {
+    font-size: 30px;
+    line-height: 1.8;
+    color: #525252;
+    margin: 10px auto;
+}
+.main .container .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: 60%;
+}
+.main .container .main-section img {
+    width: 500px;
+    padding: 20px;
+}
+.main .container .main-section .text {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 25px;
+    padding-left: 20px;
+}
+.main .container .main-section .text h1 span {
+    letter-spacing: 18px;
+    margin-left: 11px;    
+}
+.main .container .main-section .text button {
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--second-color);
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 992px) {
+    .main .container .main-section img {
+        display: none;
+    }
+    .main .container .main-section .text {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .main .container .social {
+        margin-left: 20px;
+    }
+    .main .container .main-section .text {
+        font-size: 20px;
+    }
+    .main .container .main-section .text h1 span {
+        letter-spacing: 15px;
+    }
+}
+@media (max-width: 450px) {
+    .main .container .social {
+        margin-left: 13px;
+        margin-bottom: 14px;
+        top: 45%;
+    }
+    .main .container .main-section .text {
+        font-size: 18px;
+    }
+    .main .container .main-section .text h1 span {
+        letter-spacing: 13px;
+    }
+}
+/* end  Main section  */
+/* start product-section */
+.product-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.product-section .container {
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
+    gap: 20px;
+}
+.product-section .head h2 {
+    font-size: 35px;
+    text-align: center;
+    color: var(--main-color);
+    margin: 60px ;
+}
+.product-section .container .product {
+    width: 200px;
+    height: 400px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.product-section .product img {
+    max-width: 100%;
+    min-height: 300px;
+}
+.product-section .one >img {
+    max-height: 300px;
+}
+.product-section .product .text {
+    padding: 10px;
+    text-align: center;
+}
+.product-section .product h4 {
+    color: #b4b3b3;
+    margin-bottom: 10px;
+}
+.product-section .product .text span {
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-section .product button {
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--hover-color);
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -15px;
+    left: 36px;
+    display: none;
+}
+.product-section .product:hover {
+    box-shadow: 0px 0px 18px 5px silver;
+}
+.product-section .product:hover span {
+    color: var(--main-color);
+}
+.product-section .product:hover button {
+    display: block;
+}
+@media (max-width: 549px) {
+    .product-section .container .product {
+        margin: 20px auto;
+    }
+    .product-section .container {
+        padding-left: 60px;
+    }
+    .product-section .head h2 {
+        font-size: 30px;
+        padding-left: 15px;
+    }
+}
+/* end product-section */
+/* start subscribe */
+.subscribe {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.subscribe .container .sub {
+    text-align: center;
+    position: relative;
+}
+.subscribe .container .sub h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+.subscribe .container .sub input {
+    width: 450px;
+    height: 50px;
+    padding: 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 18px 3px silver;
+}
+.subscribe .container .sub button {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--second-color);
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+}
+.subscribe hr {
+    width: 100%;
+    height: 2px;
+    background-color: #b4b3b3;
+    border: none;
+    margin: 30px 0;
+}
+@media (max-width: 767px) { 
+    .subscribe .container .sub button {
+        width: 80px;
+        margin-left: 0;
+        right: 130px;
+        bottom: 10px;
+    }
+    .subscribe hr {
+    margin: 0px;
+    }
+}
+@media (max-width:549px) { 
+    .subscribe .container .sub h2{
+        font-size: 20px;
+        margin-left: 45px;
+    }
+    .subscribe .container .sub input {
+            width: 260px;
+            padding: 15px;
+            margin-left: 45px;
+    }
+    .subscribe .container .sub button {
+        right: 20px;
+        bottom: 5px;
+    }
+}
+/* end subscribe */
+/* start Options section */
+.options {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.options .container .image {
+    width: 80px;
+    margin: 10px auto;
+}
+.options .image img {
+    max-width: 100%;
+}
+.options .container ul {
+    list-style: none;
+    width: 350px;
+    height: 50px;
+    margin: 30px auto;
+    border-radius: 30px;
+    box-shadow: 0px 0px 18px 5px silver;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.options .container ul li {
+    padding: 15px;
+}
+.options .container ul li a {
+    color: var(--text-color);
+    font-size: 20px;
+
+}
+@media (max-width:449px) {
+    .options {
+        padding-top: 15px;
+    }
+    .options .container ul {
+        width: 230px;
+        margin-left: 55px;
+    }
+}
+/* end Options section */
+/* start footer */
+.footer {
+    padding: 20px;
+    background-color: var(--text-color);
+    color: white;
+}
+.footer p {
+    font-size: 20px;
+    text-align: center;
+}
+@media (max-width:549px) {
+    .footer p {
+        font-size: 13px;
+    }
+}
+/* end footer */
